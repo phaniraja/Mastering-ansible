@@ -1,0 +1,11 @@
+[loadbalancer]
+loadbalancer ansible_ssh_host=35.162.131.200 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/phani_aws.pem
+[webserver]
+webserver-01 ansible_ssh_host=35.161.144.235 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/phani_aws.pem
+[webserver]
+webserver-02 ansible_ssh_host=35.161.182.123 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/phani_aws.pem
+[database]
+database ansible_ssh_host=35.162.13.29 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/phani_aws.pem
+[controll]
+control ansible_ssh_host=35.163.107.112 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/phani_aws.pem
+

@@ -1,0 +1,13 @@
+---
+ - hosts: loadbalancer
+   become: true
+   tasks:
+   - name: install nginx
+     apt: name=nginx state=present update_cache=yes
+
+   - name: ensure nginx started
+     service: name=nginx state=started enabled=yes
+   
+   - name: configure nginx site
+     template: src=/home/ubuntu/ansible.playbooks/nginx.conf.j2 dest=/etc/nginx/sites-availble/demo mode=0664
+
