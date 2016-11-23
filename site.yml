@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  tasks:
+   - name: create ec2 instance
+     ec2: 
+        key_name: phani_aws
+        region: us-west-2
+        instance_type: t2.micro
+        image: ami-01f05461
+        wait: yes
+        count: 1
+        vpc_subnet_id: subnet-83ed6ae7
+        assign_public_ip: yes
